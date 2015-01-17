@@ -6,6 +6,7 @@
 makeCacheMatrix <- function(Values = Matrix()) 
 {
     ## DR: Create the caching functions. Only functions to read the inverted Matrix already calculated
+
     Mat <- NULL
     
     Set <- function(x) 
@@ -25,9 +26,11 @@ makeCacheMatrix <- function(Values = Matrix())
 
 cacheSolve <- function(x) 
 {
+    
 ## Return a matrix that is the inverse of 'x'
 
     ## DR: If we know the inverse of the matrix, we read the cache, else, calculate it!
+    
     InvMat <- x$GetInv()
 
     if (!is.null(InvMat)) 
